@@ -46,4 +46,4 @@ docker pull ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
 
 ## 📜 License
 
-SkinGuardAPI proudly uses the MIT License. Dive deeper into the legalities by checking the [LICENSE](./LICENSE) document.
+SkinGuardAPI uses the MIT License. Dive deeper into the legalities by checking the [LICENSE](./LICENSE) document.
