@@ -17,8 +17,7 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
 
 ### 📋 Prerequisites
 
-1. Docker set up on your machine.
-2. Git LFS for managing those bulky model files.
+1. Docker set up on your machine. That's it. 
 
 ### 🧭 Steps to Get Started
 
