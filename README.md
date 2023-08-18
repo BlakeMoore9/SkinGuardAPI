@@ -3,7 +3,7 @@
 SkinGuardAPI is a FastAPI-based application for skin lesion detection. Designed for preliminary skin lesion checks, it offers an intuitive drag-and-drop interface, instant predictions, and confidence scores. Aimed at dermatologists and individuals alike, this tool serves as a first step in the diagnosis process.
 
 ## Screenshot
-![SkinGuardAPI Screenshot](path_to_screenshot.png)
+![SkinGuardAPI Screenshot](SkinGuardPro.png)
 <!-- *(Optional: If you have a screenshot of your application, replace 'path_to_screenshot.png' with its path)* -->
 
 ## Features
