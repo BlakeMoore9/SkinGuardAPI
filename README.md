@@ -21,12 +21,8 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
 
 ### 🧭 Steps to Get Started
 
-1. **Clone the Repository with LFS**:
-    ```bash
-    git lfs clone https://github.com/BlakeMoore9/SkinGuardAPI.git
-    ```
 
-2. **Option A - Build the Docker Image Locally**:
+**Option A - Build the Docker Image Locally**:
     Navigate to the directory containing the Dockerfile and execute the following:
     ```bash
     docker build -t skinguardapi .
@@ -37,7 +33,7 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
     docker run -p 8000:8000 skinguardapi
     ```
 
-3. **Option B - Fetch the Docker Image Directly**:
+**Option B - Fetch the Docker Image Directly**:
     Instead of building the image locally, you can pull the image directly from the GitHub Container Registry:
     ```bash
     docker pull ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
@@ -48,10 +44,10 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
     docker run -p 8000:8000 ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
     ```
 
-4. **Explanation**:
+**Explanation**:
     Both the commands mentioned in **Option A** and **Option B** start a new container. The `-p 8000:8000` option maps the container's port `8000` to your host machine's port `8000`, allowing you to access the application via a web browser. If you're new to Docker, understanding the `-p` option is crucial; without it, you won't be able to access the application externally.
 
-5. **Dive Into the Web Interface**: Launch your favorite web browser and head over to [http://localhost:8000](http://localhost:8000).
+**Dive Into the Web Interface**: Launch your favorite web browser and head over to [http://localhost:8000](http://localhost:8000).
 
 ---
 
