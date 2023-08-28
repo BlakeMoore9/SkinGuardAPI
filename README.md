@@ -23,14 +23,16 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
 
 **Option A - Build the Docker Image Locally**:  
 Navigate to the directory containing the Dockerfile and execute the following:
+
 ```
 docker build -t skinguardapi .
 ```
 
 Then run the Docker container:
-```
+
+```bash
 docker run -p 8000:8000 skinguardapi
-```
+
 
 **Option B - Fetch the Docker Image Directly**:  
 Instead of building the image locally, you can pull the image directly from the GitHub Container Registry:
