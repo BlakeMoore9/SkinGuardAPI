@@ -16,7 +16,7 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
 ## 🚀 Installation & Setup
 
 ### 📋 Prerequisites
-1. Docker set up on your machine. That's it.
+Docker set up on your machine. That's it.
 
 ### 🧭 Steps to Get Started
 
@@ -48,10 +48,11 @@ After pulling, run the Docker container using:
 docker run -p 8000:8000 ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
 ```
 
-**Explanation**:  
+**Explanation**
 Both the commands mentioned in **Option A** and **Option B** start a new container. The `-p 8000:8000` option maps the container's port `8000` to your host machine's port `8000`, allowing you to access the application via a web browser. If you're new to Docker, understanding the `-p` option is crucial; without it, you won't be able to access the application externally.
 
-**Dive Into the Web Interface**: Launch your favorite web browser and head over to [http://localhost:8000](http://localhost:8000).
+**Dive Into the Web Interface**
+Launch your favorite web browser and head over to [http://localhost:8000](http://localhost:8000).
 
 
 ## 📜 License
