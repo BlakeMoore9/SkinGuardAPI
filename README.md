@@ -29,17 +29,21 @@ docker build -t skinguardapi .
 
 Then run the Docker container:
 
-```bash
+```
 docker run -p 8000:8000 skinguardapi
-
+```
 
 **Option B - Fetch the Docker Image Directly**:  
 Instead of building the image locally, you can pull the image directly from the GitHub Container Registry:
-```bash
+
+
+```
 docker pull ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
 ```
 
 After pulling, run the Docker container using:
+
+
 ```
 docker run -p 8000:8000 ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
 ```
