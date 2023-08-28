@@ -13,6 +13,11 @@ SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate 
 - 📊 **Confidence Scores**: Delve into the rationale with insightful scores indicating prediction reliability.
 - 🔮 **Guidance System**: Receive informed recommendations based on the prediction's confidence score.
 
+## :bar_chart: Data Source
+
+[Skin Cancer MNIST: HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
+
+
 ## 🚀 Installation & Setup
 
 ### 📋 Prerequisites
