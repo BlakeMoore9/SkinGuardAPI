@@ -53,11 +53,7 @@ Both the commands mentioned in **Option A** and **Option B** start a new contain
 
 **Dive Into the Web Interface**: Launch your favorite web browser and head over to [http://localhost:8000](http://localhost:8000).
 
----
-
-This layout clearly provides two options for users: building the image themselves or pulling the pre-built image from the GitHub Container Registry.
 
 ## 📜 License
-
 SkinGuardAPI uses the MIT License. Dive deeper into the legalities by checking the [LICENSE](./LICENSE) document.
-```
+
