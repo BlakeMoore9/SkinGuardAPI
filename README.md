@@ -38,14 +38,15 @@ Instead of building the image locally, you can pull the image directly from the 
 
 
 ```
-docker pull ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.1
+docker pull ghcr.io/blakemoore9/skin_lesion_api:1.0.1
 ```
 
 After pulling, run the Docker container using:
 
 
 ```
-docker run -p 8000:8000 ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.1
+docker run -p 8000:8000 ghcr.io/blakemoore9/skin_lesion_api:1.0.1
+
 ```
 
 Both the commands mentioned in **Option A** and **Option B** start a new container. The `-p 8000:8000` option maps the container's port `8000` to your host machine's port `8000`, allowing you to access the application via a web browser. If you're new to Docker, understanding the `-p` option is crucial; without it, you won't be able to access the application externally.
