@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ SkinGuardAPI
 
 SkinGuardAPI is a state-of-the-art application leveraging FastAPI to facilitate skin lesion detection. Whether you're a dermatologist or an individual seeking preliminary checks on skin lesions, our platform provides you with an intuitive drag-and-drop interface, instant predictions, and insightful confidence scores, making it an essential first step in the diagnostic journey.
@@ -36,7 +35,7 @@ docker run -p 8000:8000 skinguardapi
 
 **Option B - Fetch the Docker Image Directly**:  
 Instead of building the image locally, you can pull the image directly from the GitHub Container Registry:
-```
+```bash
 docker pull ghcr.io/blakemoore9/skinguardapi/skin_lesion_api:1.0.0
 ```
 
