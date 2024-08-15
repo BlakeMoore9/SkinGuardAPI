@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Guard Pro</title>
+    <style>
+        body {
+            font-family: Georgia;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            font-family: georgia;
+            color: #4285F4;
+            font-size: 2.5em; /* Emphasis on the main title */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333; /* Dark gray for the subtitle */
+        }
+
+        #drop-zone-instructions {
+            margin-bottom: 10px;
+        }
+
+        #drop-zone {
+            width: 500px;
+            height: 300px;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-size: cover; /* To make sure the image covers the entire drop zone */
+            background-position: center; /* Center the background image */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Skin Guard Pro</h1>
+<h2>Please upload an image of your lesion here</h2>
+<div id="drop-zone-instructions">
+    Drop the image or click to upload.
+</div>
+<div id="drop-zone"></div>
+<p id="prediction-result"></p>
+
+<script>
+    const dropZone = document.getElementById('drop-zone');
+
+    dropZone.addEventListener('click', () => {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.click();
+        input.addEventListener('change', () => {
+            const file = input.files[0];
+            displayImage(file);
+            uploadImage(file);
+        });
+    });
+
+    dropZone.addEventListener('dragover', (event) => {
+        event.preventDefault();
+    });
+
+    dropZone.addEventListener('drop', (event) => {
+        event.preventDefault();
+        const file = event.dataTransfer.files[0];
+        displayImage(file);
+        uploadImage(file);
+    });
+
+    function displayImage(file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            dropZone.style.backgroundImage = `url(${e.target.result})`;
+        }
+        reader.readAsDataURL(file);
+    }
+
+    function uploadImage(file) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/upload/', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            let predictionText = 'Predicted class: ' + data.predicted_class + '. Confidence in prediction: ' + (data.confidence * 100).toFixed(2) + '%';
+            
+            // If confidence is below 90%, append the advisory note.
+            if (data.confidence < 0.95) {
+                predictionText += "\n\nI am not sure of this prediction, please consult a doctor.";
+            }
+            
+            document.getElementById("prediction-result").innerText = predictionText;
+            
+            // If the prediction contains 'benign', give the drop zone a thicker green border.
+            if (data.predicted_class.toLowerCase().includes('benign')) {
+                dropZone.style.border = "4px solid green";
+            } else {
+                dropZone.style.border = "2px dashed #ccc";
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred.');
+        });
+    }
+</script>
+
+</body>
+</html>
